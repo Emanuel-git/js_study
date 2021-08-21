@@ -2,7 +2,7 @@ const comparaPontuacao = (listaString) => {
     let listaArray = listaString.split(" ").map(e => parseInt(e))
     let recordeAtual = listaArray[0]
     let recordeBatidoXvezes = 0
-    let piorPontuacao = listaArray.pop() 
+    let piorPontuacao = listaArray.pop()
 
     for (let i = 0; i < listaArray.length; i++) {
         if (listaArray[i] > recordeAtual) {
