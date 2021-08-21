@@ -11,10 +11,19 @@ function gerarNumerosEntre(min, max, numerosProibidos) {
     })
 }
 
-function gerarMegaSena(qtdeNumeros) {
+async function gerarMegaSena(qtdeNumeros) {
+    const numeros = [];
+    try {
+        for(let _ of Array(qtdeNumeros).fill()) {
+            numeros.push(await gerarNumerosEntre(1, 60, numeros));
+        }
+        return numeros;
+    } catch (e) { 
+        throw "Erro!";
+    }
     
 }
 
-gerarNumerosEntre(1, 5, [1, 2, 4])
+gerarMegaSena(8)
     .then(console.log)
-    .catch(console.log)
+    .catch(console.log); 
