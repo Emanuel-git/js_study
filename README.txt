@@ -1,1 +1,1 @@
-This repository is what i learn of Javascript in Udemy
+This repository is what i learn of web and node js in Udemy
